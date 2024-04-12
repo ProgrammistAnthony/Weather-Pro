@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js" defer></script>
+    <title>Weather</title>
+</head>
+<body>
+    
+    <section class="weather">
+        <div class="container">
+
+
+            <div class="weather__search">
+                <input type="checkbox" name="" id="1" class="search__checkbox">
+                <label for="1"></label>
+                <form action="" class="search__form">
+                    <input type="text" class="search__input" placeholder="Search for your preffered city...">
+                </form>
+                <input type="button" value="Current Location" class="search__current">
+            </div>
+
+            <div class="main__content">
+
+                <!-- <div class="card__time">
+                    <p class="name__city">Athens</p>
+                    <p class="card__clock">09:03</p>
+                    <p class="card__weak">Thursday</p>
+                </div>
+
+                <div class="card__info">
+                    <div class="box__left">
+                        <p class="info__temp">24°C</p>
+                        <div class="feels__like">
+                            <p class="feels__text">Feels like:</p>
+                            <p class="feels__temp">22°C</p>
+                        </div>
+                        <div class="info__sun">
+                            <img src="./img/sunrise-white.png" alt="" class="sun__img">
+                            <div class="sunrise__block">
+                                <p class="sunrise__text">Sunrise</p>
+                                <p class="sunrise__time">06:37 AM</p>
+                            </div>
+                        </div>
+                        <div class="info__sun">
+                            <img src="./img/sunrise-white.png" alt="" class="sun__img">
+                            <div class="sunrise__block">
+                                <p class="sunrise__text">Sunset</p>
+                                <p class="sunrise__time">20:37 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box__mid">
+                        <img src="./img/info__img.png" alt="" class="mid__img">
+                        <p class="mid__text">Sunny</p>
+                    </div>
+                    <div class="box__right">
+                        <div class="right__column">
+                            <img src="./img/right__img.png" alt="" class="right__img">
+                            <p class="right__text">41%</p>
+                            <p class="right__text2">Humidity</p>
+                        </div>
+                        <div class="right__column">
+                            <img src="./img/wind.png" alt="" class="right__img" id="wind">
+                            <p class="right__text">2km/h</p>
+                            <p class="right__text2">Wind Speed</p>
+                        </div>
+                        <div class="right__column">
+                            <img src="./img/pressure-white.png" alt="" class="right__img" id="clock">
+                            <p class="right__text">997hPa</p>
+                            <p class="right__text2">Pressure</p>
+                        </div>
+                        <div class="right__column">
+                            <img src="./img/uv-white.png" alt="" class="right__img" id="uv">
+                            <p class="right__text">8</p>
+                            <p class="right__text2">UV</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="card__days">
+                    <p class="days__title">5 Days Forecast:</p>
+                    <div class="days__row">
+                        <img src="./img/clouds.png" alt="" class="days__img">
+                        <p class="days__temp">20°C</p>
+                        <p class="days__text">Friday, 1 Sep</p>
+                    </div>
+                    <div class="days__row">
+                        <img src="./img/clouds.png" alt="" class="days__img">
+                        <p class="days__temp">20°C</p>
+                        <p class="days__text">Friday, 1 Sep</p>
+                    </div>
+                    <div class="days__row">
+                        <img src="./img/clouds.png" alt="" class="days__img">
+                        <p class="days__temp">20°C</p>
+                        <p class="days__text">Friday, 1 Sep</p>
+                    </div>
+                    <div class="days__row">
+                        <img src="./img/clouds.png" alt="" class="days__img">
+                        <p class="days__temp">20°C</p>
+                        <p class="days__text">Friday, 1 Sep</p>
+                    </div>
+                    <div class="days__row">
+                        <img src="./img/clouds.png" alt="" class="days__img">
+                        <p class="days__temp">20°C</p>
+                        <p class="days__text">Friday, 1 Sep</p>
+                    </div>
+                </div>
+
+
+                <div class="cards__forecast">
+                    <div class="title__box">
+                        <p class="forecast__title">Hourly Forecast:</p>
+                    </div>
+                    <div class="cards__box">
+                        <div class="card__forecast">
+                            <p class="forecast__time">12:00</p>
+                            <img src="./img/forecast__img.png" alt="img" class="forecast__img">
+                            <p class="forecast__temp">26°C</p>
+                            <img src="./img/forecast__navigation.png" alt="img" class="forecast__navigation">
+                            <p class="forecast__km">3km/h</p>
+                        </div>
+                        <div class="card__forecast">
+                            <p class="forecast__time">15:00</p>
+                            <img src="./img/forecast__img.png" alt="img" class="forecast__img">
+                            <p class="forecast__temp">26°C</p>
+                            <img src="./img/forecast__navigation.png" alt="img" class="forecast__navigation">
+                            <p class="forecast__km">3km/h</p>
+                        </div>
+                        <div class="card__forecast">
+                            <p class="forecast__time">18:00</p>
+                            <img src="./img/forecast__img.png" alt="img" class="forecast__img">
+                            <p class="forecast__temp">26°C</p>
+                            <img src="./img/forecast__navigation.png" alt="img" class="forecast__navigation">
+                            <p class="forecast__km">3km/h</p>
+                        </div>
+                        <div class="card__forecast card__forecast-dark">
+                            <p class="forecast__time">21:00</p>
+                            <img src="./img/forecast__img.png" alt="img" class="forecast__img">
+                            <p class="forecast__temp">26°C</p>
+                            <img src="./img/forecast__navigation.png" alt="img" class="forecast__navigation">
+                            <p class="forecast__km">3km/h</p>
+                        </div>
+                        <div class="card__forecast card__forecast-dark">
+                            <p class="forecast__time">00:00</p>
+                            <img src="./img/forecast__img.png" alt="img" class="forecast__img">
+                            <p class="forecast__temp">26°C</p>
+                            <img src="./img/forecast__navigation.png" alt="img" class="forecast__navigation">
+                            <p class="forecast__km">3km/h</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="main__error">
+                    <p class="error__text">Ooops. Something went wrong.</p>
+                    <p class="error__text-mini">Error info</p>
+                </div> -->
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>

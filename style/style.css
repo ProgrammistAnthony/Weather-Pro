@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffffff, #777777);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1675px;
+    width: 100%;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.weather {
+}
+.weather__search {
+    display: flex;
+    margin-top: 63px;
+    justify-content: space-between;
+
+}
+.search__form {
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.search__form::before{
+    content: '';
+    background-image: url("../img/loopa.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 124px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search__input {
+    max-width: 803px;
+    width: 100%;
+    border-radius: 40px;
+    border: 1px solid #000;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+    color: #292929;
+    font-size: 18px;
+    padding: 20px 80px 14px 102px;
+    margin-left: 81px;
+    margin-right: 10px;
+    flex: 0 1 803px;
+}
+.search__current{
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    max-width: 292px;
+    width: 100%;
+    border-radius: 40px;
+    background: #4CBB17;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+    background: url("../img/current__icon.png") #4CBB17 13%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    padding: 0 0 0 50px;
+    cursor: pointer;
+}
+.search__current:hover{
+    background-color: #358411;
+}
+.search__current:active{
+    box-shadow: 0px 2px 0px 0px black;
+}
+.search__checkbox {
+    display: none;
+}
+.search__checkbox + label {
+    display: inline-block;
+    width: 99px;
+    height: 38px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 1px solid #000;
+    background: #D9D9D9;
+}
+.search__checkbox + label:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 8px;
+    top: 3px;
+    border-radius: 50%;
+    background-color: #111;
+    transition: transform 0.3s;
+}
+
+.search__checkbox + label:before{
+    content: "Light Mode";
+    position: absolute;
+    top: 36px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+    white-space: nowrap;
+
+}
+
+.weather__search-dark .search__checkbox + label::before {
+    content: "Dark Mode"; 
+}
+
+.search__checkbox:checked + label {
+
+}
+.search__checkbox:checked + label:after {
+     transform: translateX(25px); /* было 47 */
+}
+
+.main__content {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
+
+/* Карточка со временем */
+.card__time {
+    border-radius: 30px;
+    background: #D9D9D9;
+    max-width: 510px;
+    width: 100%;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+.name__city {
+    color: #292929;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 53px;
+}
+.card__clock {
+    color: #292929;
+    font-size: 96px;
+    font-weight: 700;
+    margin-top: 30px;
+    line-height: 1;
+}
+.card__weak {
+    color: #292929;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Секция на 5 дней */
+.card__days {
+    max-width: 414px;
+    border-radius: 30px;
+    background: #D9D9D9;
+    width: 100%;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.50);
+    padding: 18px 14px 8px 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-right: 25px;
+}
+.days__title{
+    color: #292929;
+    font-size: 32px;
+}
+.days__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.days__img {
+}
+.days__temp {
+    color: #292929;
+    font-size: 24px;
+}
+.days__text {
+    color: #292929;
+font-size: 20px;
+}
+
+/* Секция на протяжении дня */
+.cards__forecast {
+    max-width: 870px;
+    width: 100%;
+    border-radius: 30px;
+    background: #D9D9D9;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.50);
+    display: flex;
+    flex-direction: column;
+    padding: 13px 80px 16px 80px;
+    margin-top: 50px;
+}
+.title__box {
+}
+.cards__box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 19px;
+    gap: 15px;
+}
+.forecast__title {
+    color: #292929;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+.card__forecast {
+    max-width: 130px;
+    width: 100%;
+    border-radius: 40px;
+    background: linear-gradient(171deg, #F88508 -12.41%, rgba(246, 250, 217, 0.00) 163.32%);
+    color: #292929;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 13px 40px 18px 40px;
+}
+.forecast__time {
+}
+.forecast__img {
+}
+.forecast__temp {
+    font-size: 20px;
+}
+.forecast__navigation {
+}
+.forecast__km {
+    font-size: 20px;
+}
+.card__forecast-dark{
+    background: linear-gradient(174deg, #443D64 -15.92%, rgba(101, 130, 198, 0.00) 192.45%);
+}
+
+/* Карточка с деталями */
+
+.card__info {
+    max-width: 780px;
+    width: 100%;
+    border-radius: 30px;
+    background: #D9D9D9;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 26px 8px 27px 24px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.50);
+}
+.box__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.info__temp {
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(80deg, #292929 -2.93%, rgba(255, 255, 255, 0.00) 212.44%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
+.feels__like {
+    font-weight: 600;
+    color: #292929;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+.feels__text {
+    font-size: 20px;
+}
+.feels__temp {
+    font-size: 32px;
+}
+.info__sun {
+    display: flex;
+    margin-top: 10px;
+}
+.sunrise__block {
+    color: #292929;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+.sunrise__text {
+    font-size: 20px;
+}
+.sunrise__time {
+    font-size: 16px;
+}
+.sun__img{
+    margin-right: 10px;
+}
+.sun__img2{
+    margin-right: 10px;
+}
+
+.box__mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.mid__img {
+    max-width: 270px;
+    width: 100%;
+}
+.mid__text {
+    color: #292929;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.box__right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.right__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.right__img {
+    max-width: 60px;
+    width: 100%;
+}
+.right__text {
+    color: #292929;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.right__text2 {
+    color: #292929;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.dark__mode-input{
+    background: #444;
+}
+.dark__mode-body{
+    background: linear-gradient(110deg, #383838 0%, rgba(158, 158, 158, 0.00) 71.82%);
+}
+
+.dark__mode-p{
+    color: #fff;
+}
+.info__temp-dark{
+    background: linear-gradient(84deg, #FFF -16.56%, rgba(255, 255, 255, 0.00) 118.43%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card__forecast-darked{
+    background: #373636;
+}
+
+.weather__search-dark{
+    
+}
+
+.main__error {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    color:#292929;
+    text-align: center;
+}
+.error__text {
+    font-size: 68px;
+}
+.error__text-mini {
+    font-size: 30px;
+}
+.main__error-dark{
+    color: #fff;
+}
+
+.masked{
+    background-color: #777777;
+    width: 100vh;
+    height: 50px;
+}
+
+@media (max-width: 1478px) {
+    .card__info{
+        margin-right: 10px;
+    }
+}
+@media (max-width: 1405px) {
+    .card__days{
+        margin-top: 50px;
+    }
+    .main__content{
+        justify-content: center;
+    }
+    .search__checkbox:checked + label:after {
+        transform: translateX(20px); /* было 47 */
+    }
+    .search__checkbox + label:after {
+        left: 5px;
+    }
+}
+@media (max-width: 1080px){
+
+}
